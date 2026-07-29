@@ -11,6 +11,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("Home");
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-base/90 backdrop-blur-md border-b border-white/5">
@@ -22,21 +23,29 @@ export default function Header() {
           <span className="text-xl font-bold tracking-wider uppercase">Saroj</span>
         </div>
 
-        <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest text-gray-400">
-          {NAV_LINKS.map((link, i) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={
-                i === 0
-                  ? "text-white border-b-2 border-accent pb-1"
-                  : "hover:text-white transition-colors"
-              }
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+  {NAV_LINKS.map((link) => (
+    <a
+      key={link.label}
+      href={link.href}
+      onMouseEnter={() => setActive(link.label)}
+      onClick={() => setActive(link.label)}
+      className={`relative pb-2 transition-all duration-300 ${
+        active === link.label
+          ? "text-white"
+          : "text-gray-400 hover:text-white"
+      }`}
+    >
+      {link.label}
+
+      <span
+        className={`absolute left-0 bottom-0 h-[2px] bg-accent transition-all duration-300 ${
+          active === link.label ? "w-full" : "w-0"
+        }`}
+      />
+    </a>
+  ))}
+</nav>
 
         <button className="hidden lg:inline-flex bg-accent hover:bg-accent-hover px-6 py-2 rounded-md text-sm font-semibold transition-all">
           LET'S TALK
@@ -64,18 +73,29 @@ export default function Header() {
 
       {open && (
         <div className="lg:hidden px-6 pb-6 border-t border-line">
-          <nav className="flex flex-col space-y-4 pt-4 text-sm font-medium uppercase tracking-widest text-gray-400">
-            {NAV_LINKS.map((link, i) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className={i === 0 ? "text-white" : "hover:text-white"}
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+  {NAV_LINKS.map((link) => (
+    <a
+      key={link.label}
+      href={link.href}
+      onMouseEnter={() => setActive(link.label)}
+      onClick={() => setActive(link.label)}
+      className={`relative pb-2 transition-all duration-300 ${
+        active === link.label
+          ? "text-white"
+          : "text-gray-400 hover:text-white"
+      }`}
+    >
+      {link.label}
+
+      <span
+        className={`absolute left-0 bottom-0 h-[2px] bg-accent transition-all duration-300 ${
+          active === link.label ? "w-full" : "w-0"
+        }`}
+      />
+    </a>
+  ))}
+</nav>
           <button className="mt-6 w-full bg-accent hover:bg-accent-hover px-6 py-3 rounded-md text-sm font-semibold transition-all">
             LET'S TALK
           </button>
