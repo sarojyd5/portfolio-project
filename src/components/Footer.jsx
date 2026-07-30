@@ -35,11 +35,13 @@ export default function Footer() {
               f
             </a>
             <a
-              href="#"
-              className="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center text-sm hover:bg-accent hover:border-accent transition-colors"
-            >
-              gh
-            </a>
+             href="https://github.com/sarojyd5?tab=repositories"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center text-sm hover:bg-accent hover:border-accent transition-colors"
+>
+  gh
+</a>
             <a
               href="#"
               className="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center text-sm hover:bg-accent hover:border-accent transition-colors"

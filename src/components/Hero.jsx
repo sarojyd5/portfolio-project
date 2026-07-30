@@ -43,11 +43,13 @@ export default function Hero() {
                 f
               </a>
               <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-accent transition-colors"
-              >
-                gh
-              </a>
+               href="https://github.com/sarojyd5?tab=repositories"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-accent transition-colors"
+>
+  gh
+</a>
               <a
                 href="#"
                 className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-accent transition-colors"
