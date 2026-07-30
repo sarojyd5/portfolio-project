@@ -63,9 +63,9 @@ export default function About() {
               ))}
             </ul>
 
-            <button className="bg-accent hover:bg-accent-hover px-8 py-4 rounded-full font-bold flex items-center transition-all">
-              GET IN TOUCH <span className="ml-2">→</span>
-            </button>
+           <a href="#contact-form" className="bg-accent hover:bg-accent-hover px-8 py-4 rounded-full font-bold flex items-center transition-all w-fit">
+  GET IN TOUCH <span className="ml-2">→</span>
+</a>
           </div>
         </div>
 

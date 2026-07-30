@@ -30,9 +30,9 @@ export default function Hero() {
             wireframe to the final line of code.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <button className="bg-accent hover:bg-accent-hover px-8 py-4 rounded-full font-bold flex items-center transition-all">
-              GET IN TOUCH <span className="ml-2">→</span>
-            </button>
+            <a href="#contact-form" className="bg-accent hover:bg-accent-hover px-8 py-4 rounded-full font-bold flex items-center transition-all">
+  GET IN TOUCH <span className="ml-2">→</span>
+</a>
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/share/1BACQCfizN/"

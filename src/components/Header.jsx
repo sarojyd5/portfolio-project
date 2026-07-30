@@ -47,10 +47,9 @@ export default function Header() {
   ))}
 </nav>
 
-        <button className="hidden lg:inline-flex bg-accent hover:bg-accent-hover px-6 py-2 rounded-md text-sm font-semibold transition-all">
-          LET'S TALK
-        </button>
-
+        <a href="#contact-form" className="hidden lg:inline-flex bg-accent hover:bg-accent-hover px-6 py-2 rounded-md text-sm font-semibold transition-all">
+  LET'S TALK
+</a>
         <button
           className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5"
           aria-label="Toggle menu"
@@ -96,9 +95,9 @@ export default function Header() {
     </a>
   ))}
 </nav>
-          <button className="mt-6 w-full bg-accent hover:bg-accent-hover px-6 py-3 rounded-md text-sm font-semibold transition-all">
-            LET'S TALK
-          </button>
+         <a href="#contact-form" onClick={() => setOpen(false)} className="mt-6 w-full bg-accent hover:bg-accent-hover px-6 py-3 rounded-md text-sm font-semibold transition-all flex items-center justify-center">
+  LET'S TALK
+</a>
         </div>
       )}
     </header>
