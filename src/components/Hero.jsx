@@ -1,4 +1,4 @@
-const HERO_IMG = "/hero.jpg";
+const HERO_IMG = "about.png.jpeg";
 
 export default function Hero() {
   return (

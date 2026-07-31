@@ -1,4 +1,4 @@
-const ABOUT_IMG = "/about.jpg";
+const ABOUT_IMG = "/hero.png.jpeg";
 
 const STATS = [
   { value: "280+", label: "Google Reviews" },
